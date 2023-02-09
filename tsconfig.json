@@ -1,0 +1,36 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "rootDir": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@atom/*": [
+        "./components/atom/*"
+      ],
+      "@molecule/*": [
+        "./components/molecule/*"
+      ],
+      "@organism/*": [
+        "./components/organism/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@constants/*": [
+        "./constants/*"
+      ],
+      "@composable/*": [
+        "./composables/*"
+      ],
+    }
+  }
+}

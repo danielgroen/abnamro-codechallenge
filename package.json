@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev -o & npm run typescript:watch",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typescript:watch": "tsc --watch",
+    "typescript:o": "tsc -outFile dist"
+  },
+  "devDependencies": {
+    "@fontsource/bebas-neue": "^4.5.9",
+    "@lewebsimple/nuxt3-svg": "^0.1.1",
+    "nuxt": "3.0.0",
+    "prettier": "^2.8.1",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "yarn": "Please use npm",
+    "pnpm": "Please use npm"
+  },
+  "prettier": {
+    "printWidth": 100
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^4.5.13"
+  }
+}

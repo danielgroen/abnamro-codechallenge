@@ -1,0 +1,8 @@
+$spacing: 16px;
+
+@function spacing($num) {
+  @return $spacing * $num;
+}
+
+$padding: 5px;
+$padding-l: 7px;
