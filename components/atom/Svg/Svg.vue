@@ -6,12 +6,12 @@
   // https://nuxt.com/docs/guide/directory-structure/composables
   import Icons from '@utils/icons.util';
   
-  type availableIcons = "star" | "starFilled" | "cart";
-  type availableFill = "white" | "green";
+  type availableIcons = "search";
+  type availableFill = "white" | "primary";
   const { icon, color } = defineProps<{ icon: availableIcons, color: availableFill }>();
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .svg {
   width: 24px;
   height: 24px;
@@ -19,7 +19,7 @@
 .svg--white {
   fill: white;
 }
-.svg--green {
-  fill: green;
+.svg--primary {
+  fill: $color-primary;
 }
 </style>
