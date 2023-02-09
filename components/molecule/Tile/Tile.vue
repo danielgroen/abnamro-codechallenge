@@ -15,6 +15,7 @@
 <style lang="scss" scoped>
   .tile {
     position: relative;
+    user-select: none;
     transition: transform 0.2s ease-in-out;
 
     &:hover {

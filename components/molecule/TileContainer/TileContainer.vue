@@ -19,13 +19,12 @@ const { dataPerGenre } = await useTileContainer(props.genre);
 <style scoped lang="scss">
 .tile-container {
   margin-top: spacing(4);
-  overflow-x: scroll;
-  overflow-y: hidden;
-
+  
   &__wrapper {
     display: flex;
-    // flex-wrap: wrap;
     gap: spacing(2);
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 
   &__tile {
