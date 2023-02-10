@@ -2,8 +2,10 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    "jsx": "preserve",
     "types": [
-      "node"
+      "node",
+      "@nuxt/types"
     ],
     "rootDir": ".",
     "paths": {

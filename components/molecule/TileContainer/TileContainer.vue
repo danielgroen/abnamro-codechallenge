@@ -29,7 +29,7 @@ const { dataPerGenre } = await useTileContainer(props.genre);
 
     &::after {
       content: '';
-      width: clamp-calc(spacing(4), spacing(6));
+      width: clamp-calc(spacing(2), spacing(6));
       background: linear-gradient(90deg, rgba($background-color,0) 0%, rgba($background-color,1) 100%); 
       position: fixed;
       right: 0;

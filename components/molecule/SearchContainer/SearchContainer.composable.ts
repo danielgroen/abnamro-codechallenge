@@ -1,4 +1,5 @@
 const isSearching = ref(false);
+const hasSearchResults = ref(false);
 
 export const useSearchContainer = () => {
   const toggleSearch = () => { isSearching.value = !isSearching.value }
@@ -6,5 +7,6 @@ export const useSearchContainer = () => {
   return {
     toggleSearch,
     isSearching,
+    hasSearchResults,
   }
 }

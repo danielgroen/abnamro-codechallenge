@@ -17,6 +17,7 @@
   "devDependencies": {
     "@fontsource/bebas-neue": "^4.5.9",
     "@lewebsimple/nuxt3-svg": "^0.1.1",
+    "@nuxt/types": "^2.16.0",
     "@vue/test-utils": "^2.2.10",
     "happy-dom": "^8.2.6",
     "nuxt": "3.0.0",
