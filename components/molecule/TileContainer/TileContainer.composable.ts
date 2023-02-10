@@ -5,9 +5,10 @@ export const useTileContainer = async (genre: String) => {
 
   const { data } = await useFetch<TileType[]>('https://api.tvmaze.com/shows');
 
-  const dataPerGenre = data.value?.filter((item: any) => item.genres?.includes(genre));
+  const dataPerGenre = unref(data)?.filter((item: any) => item.genres?.includes(genre)) || [];
+  const dataPerGenreFiltered = unref(dataPerGenre).sort((a, b) => (a.rating.average < b.rating.average) ? 1 : -1);
 
   return {
-    dataPerGenre
+    dataPerGenreFiltered
   }
 }

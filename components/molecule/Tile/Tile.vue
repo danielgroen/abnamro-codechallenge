@@ -2,7 +2,6 @@
   <nuxt-link class="tile" :href="`/show/${data.id}`">
     <img v-if="hasImage" class="tile__img" :src="data.image.medium" :alt="data.name">
     <div v-else class="tile__img" />
-
     <Heading h3 white >{{ data.name }}</Heading>
   </nuxt-link>
 </template>
@@ -25,7 +24,8 @@
     &__img {
       width: 210px;
       height: 295px;
-      background: linear-gradient(to right bottom,  #666, #4b4b4b); 
+      background: linear-gradient(to right bottom,  #666, #4b4b4b);
+      font-size: 0;
     }
 
     &:hover {

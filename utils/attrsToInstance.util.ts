@@ -14,7 +14,7 @@ export default function attrsToInstance() {
   /**
    * Colors
    */
-  const _defaultColors = ['primary-color', 'secondary-color', 'tertiary-color', 'black', 'white'];
+  const _defaultColors = ['primary-color', 'secondary-color', 'tertiary-color', 'black', 'white', 'gray'];
   const colors = ((possibleColors = _defaultColors) => _AvailableAttrs.filter(color => possibleColors.includes(color)))()[0];
 
   /**

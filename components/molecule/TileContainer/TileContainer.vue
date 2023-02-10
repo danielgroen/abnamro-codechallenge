@@ -3,7 +3,7 @@
   <Heading h2 white >{{ genre }}</Heading>
 
   <div class="tile-container__wrapper">
-    <Tile class="tile-container__tile" v-for="item in dataPerGenre" :data="item" />
+    <Tile class="tile-container__tile" v-for="item in dataPerGenreFiltered" :data="item" />
   </div>
   </section>
 </template>
@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 
 const props = defineProps<{ genre: string }>();
-const { dataPerGenre } = await useTileContainer(props.genre);
+const { dataPerGenreFiltered } = await useTileContainer(props.genre);
 
 </script>
 

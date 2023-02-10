@@ -31,8 +31,6 @@
     unref(searchEl).focus();
   });
 
-
-
 </script>
 
 <style scoped lang="scss">
