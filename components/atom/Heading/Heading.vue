@@ -20,11 +20,7 @@
     font-family: $secondary-font;
   }
 
-  h1 {
-    font-size: 3rem; // Don't mind this ugly styling
-  }
-
-  h2 {
-    font-size: 2rem; // Don't mind this ugly styling
-  }
+  // Don't mind this ugly styling
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <component v-if="icon" :class="['svg', `svg--${color}`]" :is="Icons[icon]"/>
+  <component v-if="icon" class="svg" :is="Icons[icon]"/>
 </template>
 
 <script setup lang="ts">
@@ -7,8 +7,7 @@
   import Icons from '@utils/icons.util';
   
   type availableIcons = "search";
-  type availableFill = "white" | "primary";
-  const { icon, color } = defineProps<{ icon: availableIcons, color: availableFill }>();
+  const { icon } = defineProps<{ icon: availableIcons }>();
 </script>
 
 <style scoped lang="scss">
@@ -16,10 +15,5 @@
   width: 24px;
   height: 24px;
 }
-.svg--white {
-  fill: white;
-}
-.svg--primary {
-  fill: $color-primary;
-}
+
 </style>

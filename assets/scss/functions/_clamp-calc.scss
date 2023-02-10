@@ -1,0 +1,27 @@
+@use "sass:math";
+
+@function _strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @else {
+    @return $number;
+  }
+}
+
+//
+// Let the function do the calculation of the clamp	*/
+//
+@function clamp-calc($min, $max, $output: 'px') {
+  $max-width: 1640;
+  $computed-vw: math.div(_strip-unit($max), $max-width) * 100vw; 
+
+  @if $output == 'rem' {
+    @return clamp(#{rem($min)}, #{$computed-vw}, #{rem($max)});
+  }
+
+  @else {
+    @return clamp(#{$min}, #{$computed-vw}, #{$max});
+  }
+}
