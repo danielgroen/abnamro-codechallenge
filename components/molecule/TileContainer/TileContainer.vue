@@ -9,7 +9,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useTileContainer } from './TileContainer.composable';
 
 const props = defineProps<{ genre: string }>();
 const { dataPerGenre } = await useTileContainer(props.genre);
@@ -25,6 +24,18 @@ const { dataPerGenre } = await useTileContainer(props.genre);
     gap: spacing(2);
     overflow-x: scroll;
     overflow-y: hidden;
+    margin-right: calc(#{clamp-calc(spacing(2), spacing(4))} * -1);
+    position: relative;
+
+    &::after {
+      content: '';
+      width: clamp-calc(spacing(4), spacing(6));
+      background: linear-gradient(90deg, rgba($background-color,0) 0%, rgba($background-color,1) 100%); 
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+    }
   }
 
   &__tile {
