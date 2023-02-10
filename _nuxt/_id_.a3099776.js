@@ -1,0 +1,1 @@
+import{a as o,D as n,w as r,b as c,t as p,u as i,o as m}from"./entry.3a8af4a4.js";import{u as _}from"./fetch.683338e9.js";const w=o({__name:"[id]",async setup(u){let t,e;const{params:{id:a}}=n(),{data:s}=([t,e]=r(()=>_(`https://api.tvmaze.com/shows/${a}`,"$55vpW6R45x")),t=await t,e(),t);return(l,d)=>(m(),c("div",null,p(i(s)),1))}});export{w as default};
