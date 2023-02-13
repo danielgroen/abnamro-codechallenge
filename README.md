@@ -15,5 +15,7 @@ https://static.tvmaze.com/apidoc/
   
 - The favorites hasn't been set in a state management tool
 - I agree on: yes this code can be much cleaner.. however to write the most pure clean code it'll just take time so out of scope here
+
 ### Demo
 🔗 [Link to live demo](https://danielgroen.github.io/abnamro-codechallenge/)
+

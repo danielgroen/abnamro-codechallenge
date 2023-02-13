@@ -15,11 +15,19 @@ describe('🧪 SearchContainer', () => {
   });
 
   test('renders empty without any data', () => {
-    expect(wrapper.findAll('Tile').length).toBeFalsy();
+    expect(wrapper.findAll('tile').length).toBeFalsy();
   })
 
-  test('testing with data', async () => {
-    const wrapper = await shallowMount(SearchContainer);
-    console.log(wrapper.vm); // Todo:: have a look why this returns an emty object
+  test('shows all tiles when the ref "searchItemResults" is mocked', async () => {
+    const wrapper = shallowMount(SearchContainer, {
+      global: {
+        mocks: {
+          searchItemResults: searchData
+        }
+      }
+    });
+
+    await wrapper.vm.$nextTick()
+    expect(wrapper.findAll('tile').length).toBe(10);
   })
 })

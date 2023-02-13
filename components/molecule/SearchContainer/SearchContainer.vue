@@ -2,7 +2,7 @@
   <div class="search-container" >
     <input ref="searchEl" placeholder="Search..." @input="catchData()" v-model="searchInput" v-focus class="search-container__input" type="search" name="search" id="">
     <div class="search-container__wrapper" >
-      <Tile v-for="{show} in searchItemResults" @click="toggleSearch()" :key="`${show.id}`" :data="show" />
+      <Tile v-for="{show} in searchItemResults" @click="toggleSearch()" :key="`{show.id}`" :data="show" />
       <div v-if="showNotfoundMessage" >Couldn't find your movie... Try again!</div>
     </div>
   </div>
@@ -11,7 +11,6 @@
 <script setup lang="ts">
   import SearchContainerType from '@molecule/SearchContainer/SearchContainer.type';
   const { toggleSearch } = useSearchContainer();
-
 
   const searchEl = ref();
   const searchInput = ref('');
