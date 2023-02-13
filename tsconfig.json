@@ -12,6 +12,9 @@
       "@/*": [
         "./*"
       ],
+      "@mockdata/*": [
+        "./test/mockdata/*"
+      ],
       "@atom/*": [
         "./components/atom/*"
       ],

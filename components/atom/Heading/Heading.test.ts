@@ -1,4 +1,3 @@
-import { describe, test, expect } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
 import Heading from './Heading.vue';
 
@@ -10,6 +9,13 @@ const doMount = (props: Object) => {
 }
 
 describe('🧪 Heading', () => {
+
+  test('should render properly without any errors', () => {
+    const spy = vi.spyOn(console, 'error')
+    doMount({ h1: true });
+
+    expect(spy).not.toHaveBeenCalled();
+  });
 
   test('Renders as h1 element', () => {
     const wrapper = doMount({ h1: true });

@@ -3,10 +3,9 @@
 </template>
 
 <script setup lang="ts">
-  // https://nuxt.com/docs/guide/directory-structure/composables
   import Icons from '@utils/icons.util';
   
-  type availableIcons = "search";
+  type availableIcons = "search" | "close" | "star";
   const { icon } = defineProps<{ icon: availableIcons }>();
 </script>
 

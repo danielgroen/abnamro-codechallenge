@@ -1,36 +1,36 @@
 // Not checked on null or undefined
 export default interface TileType {
   id: Number,
-  url: String,
-  name: String,
-  type: String,
-  language: String,
-  genres: String[],
-  status: String,
+  url: string,
+  name: string,
+  type: string,
+  language: string,
+  genres: string[],
+  status: string,
   runtime: Number,
   averageRuntime: Number,
-  premiered: String,
-  ended: String,
-  officialSite: String,
-  schedule: { time: String, days: String[] },
+  premiered: string,
+  ended: string,
+  officialSite: string,
+  schedule: { time: string, days: string[] },
   rating: { average: Number },
   weight: Number,
   network: any,
-  webChannel?: String,
-  dvdCountry?: String,
+  webChannel?: string,
+  dvdCountry?: string,
   externals: {
-    tvrage: String,
+    tvrage: string,
     thetvdb: Number,
-    imdb: String
+    imdb: string
   },
   image: {
-    medium: String,
-    original: String
+    medium: string,
+    original: string
   },
-  summary: String,
+  summary: string,
   updated: Number,
   _links: {
-    self: { href: String },
-    previousepisode?: { href: String }
+    self: { href: string },
+    previousepisode?: { href: string }
   }
 }
