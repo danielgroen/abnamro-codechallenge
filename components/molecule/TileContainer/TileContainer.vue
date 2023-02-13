@@ -20,6 +20,7 @@ const { dataPerGenreFiltered } = await useTileContainer(props.genre);
   margin-top: spacing(4);
   
   &__wrapper {
+    scroll-snap-type: x mandatory;
     display: flex;
     gap: spacing(2);
     overflow-x: scroll;
@@ -41,6 +42,7 @@ const { dataPerGenreFiltered } = await useTileContainer(props.genre);
   &__tile {
     height: 330px;
     margin-top: spacing(1);
+    scroll-snap-align: start;
   }
 }
 </style>
